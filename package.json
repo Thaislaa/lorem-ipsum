@@ -1,0 +1,15 @@
+{
+  "name": "template-html-css",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:visual": "node scripts/visual-test.mjs"
+  },
+  "devDependencies": {
+    "pixelmatch": "^7.1.0",
+    "playwright": "^1.52.0",
+    "pngjs": "^7.0.0",
+    "serve-handler": "^6.1.6"
+  }
+}

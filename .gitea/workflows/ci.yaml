@@ -1,0 +1,137 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Instalar Chromium (Playwright)
+        run: npx playwright install --with-deps chromium
+
+      - name: Validação visual
+        run: npm run test:visual
+
+      - name: Publicar resultados visuais
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: visual-results
+          path: visual-results/
+          if-no-files-found: ignore
+
+      - name: Notify LMS
+        if: always()
+        env:
+          LMS_CONTENT_URL: ${{ vars.LMS_CONTENT_URL != '' && vars.LMS_CONTENT_URL || secrets.LMS_CONTENT_URL }}
+          LMS_CONTENT_INTERNAL_URL: ${{ vars.LMS_CONTENT_INTERNAL_URL != '' && vars.LMS_CONTENT_INTERNAL_URL || secrets.LMS_CONTENT_INTERNAL_URL }}
+          LMS_PIPELINE_HOOK_URL: ${{ vars.LMS_PIPELINE_HOOK_URL != '' && vars.LMS_PIPELINE_HOOK_URL || secrets.LMS_PIPELINE_HOOK_URL }}
+          WEBHOOK_SECRET: ${{ vars.WEBHOOK_SECRET != '' && vars.WEBHOOK_SECRET || secrets.WEBHOOK_SECRET }}
+          GITEA_REPOSITORY_ID: ${{ gitea.event.repository.id }}
+          FAILED_STEP: ${{ gitea.job }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          if [ "$JOB_STATUS" != "success" ] && [ "$JOB_STATUS" != "failure" ]; then
+            echo "LMS notification skipped: job status ${JOB_STATUS}."
+            exit 0
+          fi
+          if [ -z "$LMS_CONTENT_URL" ] || [ -z "$WEBHOOK_SECRET" ]; then
+            echo "LMS notification skipped: LMS_CONTENT_URL ou WEBHOOK_SECRET não configurados." >&2
+            exit 0
+          fi
+          if [ -z "$GITEA_REPOSITORY_ID" ]; then
+            echo "LMS notification skipped: gitea.event.repository.id não disponível." >&2
+            exit 0
+          fi
+          apt-get update -qq && apt-get install -y -qq jq curl
+
+          resolve_hook_url() {
+            local base="${1%/}"
+            if [ -n "${LMS_PIPELINE_HOOK_URL:-}" ]; then
+              echo "${LMS_PIPELINE_HOOK_URL%/}"
+              return
+            fi
+            case "$base" in
+              */hooks/gitea/pipeline)
+                echo "$base"
+                ;;
+              */api/content|*.svc*|*.svc.cluster.local*|*:3000|*:3002|*localhost:3000|*localhost:3002)
+                echo "${base}/hooks/gitea/pipeline"
+                ;;
+              *)
+                echo "${base}/api/content/hooks/gitea/pipeline"
+                ;;
+            esac
+          }
+
+          post_webhook() {
+            local url="$1"
+            echo "URL completa do webhook: POST ${url}"
+            HTTP_CODE=$(curl -sS -o /tmp/lms-response.txt -w "%{http_code}" \
+              -X POST "${url}" \
+              -H "Content-Type: application/json" \
+              -H "X-Gitea-Hook-Token: ${WEBHOOK_SECRET}" \
+              -d "$BODY") || HTTP_CODE="000"
+            if [ "$HTTP_CODE" = "000" ]; then
+              echo "LMS notification request failed." >&2
+              return
+            fi
+            if [ "$HTTP_CODE" -ge 400 ]; then
+              echo "LMS notification failed with HTTP ${HTTP_CODE} (POST ${url})" >&2
+              cat /tmp/lms-response.txt >&2
+            else
+              echo "LMS notification sent successfully (HTTP ${HTTP_CODE})."
+            fi
+          }
+
+          LMS_CONTENT_URL="${LMS_CONTENT_URL%/}"
+          HOOK_URL="$(resolve_hook_url "$LMS_CONTENT_URL")"
+          echo "LMS_CONTENT_URL (base): ${LMS_CONTENT_URL}"
+          echo "Gitea repository: ${{ gitea.repository }} (giteaId=${GITEA_REPOSITORY_ID})"
+
+          if [ "$JOB_STATUS" = "success" ]; then
+            BODY=$(jq -n \
+              --argjson giteaId "$GITEA_REPOSITORY_ID" \
+              '{giteaId: $giteaId, status: "SUCCESS"}')
+          else
+            BODY=$(jq -n \
+              --argjson giteaId "$GITEA_REPOSITORY_ID" \
+              --arg failedStep "${FAILED_STEP:-unknown}" \
+              '{giteaId: $giteaId, status: "FAILURE", failedStep: $failedStep}')
+          fi
+
+          post_webhook "$HOOK_URL"
+
+          if [ "$HTTP_CODE" = "404" ] && [[ "$HOOK_URL" == *"/api/content/"* ]]; then
+            INTERNAL_BASE="${LMS_CONTENT_INTERNAL_URL:-http://content-dev-cwi-lms-content.lms-dev.svc.cluster.local:3000}"
+            INTERNAL_BASE="${INTERNAL_BASE%/}"
+            FALLBACK_URL="${INTERNAL_BASE}/hooks/gitea/pipeline"
+            if [ "$FALLBACK_URL" != "$HOOK_URL" ]; then
+              echo "404 via gateway; tentando URL interna do content service."
+              post_webhook "$FALLBACK_URL"
+            fi
+          fi
+
+          if [ "$HTTP_CODE" = "404" ]; then
+            if grep -q 'Repository not found for giteaId' /tmp/lms-response.txt 2>/dev/null; then
+              echo "Repositório não vinculado ao LMS (giteaId=${GITEA_REPOSITORY_ID})." >&2
+              echo "Esperado para repos criados pelo aluno via LMS; o template admin/template-html-css não é registrado." >&2
+            else
+              echo "Dica: configure LMS_CONTENT_URL com a base do content API (ex.: http://content-dev-cwi-lms-content.lms-dev.svc.cluster.local:3000)" >&2
+              echo "ou LMS_PIPELINE_HOOK_URL com a URL completa do webhook." >&2
+            fi
+          fi

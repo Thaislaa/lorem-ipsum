@@ -1,0 +1,4 @@
+# index.html + contato.html + sobre.html
+/
+/contato
+/sobre

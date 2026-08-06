@@ -1,0 +1,28 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Visual test output (diffs / actual screenshots)
+visual-results/
+
+# dotenv environment variable files
+.env
+.env.*
+!.env.example
+
+# Optional npm cache directory
+.npm
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
