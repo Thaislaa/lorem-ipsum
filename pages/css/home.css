@@ -6,7 +6,7 @@ header {
     display: flex;
 }
 
-.home1 {
+.banner {
     background-image: linear-gradient(rgba(81, 80, 112, 0.7),
             rgba(81, 80, 112, 0.7)), url(../../img/Image.jpg);
     background-size: cover;
@@ -38,15 +38,19 @@ nav a {
 
 a,
 h1,
+h2,
 button {
     font-family: "Montserrat", sans-serif;
 }
 
-.banner>p {
-    font-family: "Open Sans", sans-serif;
+.banner-infos>p {
     font-size: 1.3em;
     color: #FFFFFF;
     margin: 0;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
 }
 
 .container {
@@ -68,14 +72,12 @@ h1 {
     margin: 20px 0;
 }
 
-.banner {
+.banner-infos {
     display: flex;
     flex-direction: column;
 }
 
-.banner button {
-    background-color: #FF8E6E;
-    border: 1px solid #FF8E6E;
+button {
     color: #FFFFFF;
     font-weight: 700;
     font-size: 1em;
@@ -84,4 +86,44 @@ h1 {
     cursor: pointer;
     margin: 20px 0;
     border-radius: 4px;
+}
+
+.banner-infos button {
+    background-color: #FF8E6E;
+    border: 1px solid #FF8E6E;
+}
+
+.sobre {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sobre>img {
+    max-width: 45%;
+    max-height: 45%;
+}
+
+.text-sobre-nos {
+    color: #515070;
+    font-size: 1.3em;
+    margin: 0;
+}
+
+.text-lorem {
+    width: 480px;
+    color: #898989;
+    line-height: 2em;
+}
+
+.sobre-infos h2 {
+    color: #FF8E6E;
+    font-size: 4em;
+    margin: 0;
+}
+
+.sobre-infos button {
+    background-color: #515070;
+    border: 1px solid #515070;
 }
