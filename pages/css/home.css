@@ -40,7 +40,9 @@ a,
 h1,
 h2,
 h3,
-button {
+button,
+.card-nome,
+.card-data {
     font-family: "Montserrat", sans-serif;
 }
 
@@ -71,11 +73,16 @@ p {
 }
 
 h1,
-h3 {
+h3,
+h2 {
     font-size: 4em;
     color: #FFFFFF;
     font-weight: 700;
     margin: 0;
+}
+
+.depoimentos-infos>h2 {
+    color: #FF8E6E;
 }
 
 .banner-infos {
@@ -120,8 +127,9 @@ button {
 }
 
 .text-lorem {
-    max-width: 550px;
+    max-width: 600px;
     line-height: 2em;
+    font-size: 1.2em;
 }
 
 .cinza {
@@ -150,9 +158,59 @@ button {
     background-size: cover;
 }
 
-.servicos-infos {
+.servicos-infos,
+.depoimentos-infos {
     justify-content: center;
     display: flex;
     flex-direction: column;
     height: 100%;
+}
+
+.depoimentos {
+    height: 100vh;
+    background-color: #F6F6F6;
+}
+
+.card-img-info>img {
+    width: 80px;
+    height: 80px;
+}
+
+.div-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.card {
+    max-width: 47%;
+}
+
+.conteudo {
+    padding: 25px;
+    background-color: #fff;
+}
+
+.card-img-info {
+    display: flex;
+    align-items: center;
+}
+
+.card-nome {
+    color: #515070;
+    font-weight: 700;
+    font-size: 1.3em;
+    margin: 0 0 0 25px;
+}
+
+.card-data {
+    color: #FF8E6E;
+    margin: 0;
+    margin: 5px 0 0 25px;
+}
+
+.card-mensagem {
+    line-height: 2em;
+    color: #898989;
+    font-size: 1.2em;
 }
