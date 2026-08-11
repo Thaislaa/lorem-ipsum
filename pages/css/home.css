@@ -39,6 +39,7 @@ nav a {
 a,
 h1,
 h2,
+h3,
 button {
     font-family: "Montserrat", sans-serif;
 }
@@ -65,11 +66,16 @@ p {
     justify-content: space-between;
 }
 
-h1 {
+.banner h1 {
+    margin-bottom: 30px;
+}
+
+h1,
+h3 {
     font-size: 4em;
     color: #FFFFFF;
     font-weight: 700;
-    margin: 20px 0;
+    margin: 0;
 }
 
 .banner-infos {
@@ -88,6 +94,7 @@ button {
     border-radius: 4px;
 }
 
+.servicos-infos>button,
 .banner-infos button {
     background-color: #FF8E6E;
     border: 1px solid #FF8E6E;
@@ -105,16 +112,24 @@ button {
     max-height: 45%;
 }
 
-.text-sobre-nos {
+.text-sobre-nos,
+.subtitulo-servicos {
     color: #515070;
     font-size: 1.3em;
     margin: 0;
 }
 
 .text-lorem {
-    width: 480px;
-    color: #898989;
+    max-width: 550px;
     line-height: 2em;
+}
+
+.cinza {
+    color: #898989;
+}
+
+.white {
+    color: #FFFFFF;
 }
 
 .sobre-infos h2 {
@@ -126,4 +141,18 @@ button {
 .sobre-infos button {
     background-color: #515070;
     border: 1px solid #515070;
+}
+
+.servicos {
+    height: 100vh;
+    background-image: linear-gradient(rgba(81, 80, 112, 0.7),
+            rgba(81, 80, 112, 0.7)), url(../../img/image-servicos.png);
+    background-size: cover;
+}
+
+.servicos-infos {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
