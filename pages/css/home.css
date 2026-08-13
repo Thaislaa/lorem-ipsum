@@ -42,7 +42,8 @@ h2,
 h3,
 button,
 .card-nome,
-.card-data {
+.card-data,
+.titulo-func {
     font-family: "Montserrat", sans-serif;
 }
 
@@ -81,7 +82,7 @@ h2 {
     margin: 0;
 }
 
-.depoimentos-infos>h2 {
+h2 {
     color: #FF8E6E;
 }
 
@@ -213,4 +214,70 @@ button {
     line-height: 2em;
     color: #898989;
     font-size: 1.2em;
+}
+
+.funcionalidades {
+    height: 100vh;
+    background: linear-gradient(135deg, #515070, #6B69B0);
+}
+
+.funcionalidades-infos {
+    height: 100%;
+}
+
+.funcionalidades-infos {
+    margin-bottom: 0;
+}
+
+.funcionalidades-img {
+    display: flex;
+    align-items: end;
+}
+
+.funcionalidades-img>img {
+    height: 650px;
+}
+
+.funcionalidades>h2 {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.funcionalidades-info {
+    display: flex;
+    flex-direction: row;
+    height: 85%;
+    justify-content: space-around;
+}
+
+.card-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-func>img {
+    width: 50px;
+    height: 50px;
+    margin-right: 25px;
+}
+
+.titulo-func {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.funcionalidade-texto {
+    width: 243px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.item-func {
+    display: flex;
+    align-items: center;
 }
