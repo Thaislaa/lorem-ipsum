@@ -249,7 +249,7 @@ button {
     display: flex;
     flex-direction: row;
     height: 85%;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .card-item {
