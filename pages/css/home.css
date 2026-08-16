@@ -120,6 +120,11 @@ button {
     max-height: 45%;
 }
 
+.fale-conosco>img {
+    max-width: 55%;
+    max-height: 55%;
+}
+
 .text-sobre-nos,
 .subtitulo-servicos {
     color: #515070;
@@ -141,13 +146,15 @@ button {
     color: #FFFFFF;
 }
 
-.sobre-infos h2 {
+.sobre-infos h2,
+.fale-conosco-info h2 {
     color: #FF8E6E;
     font-size: 4em;
     margin: 0;
 }
 
-.sobre-infos button {
+.sobre-infos button,
+.fale-conosco-info button {
     background-color: #515070;
     border: 1px solid #515070;
 }
@@ -280,4 +287,12 @@ button {
 .item-func {
     display: flex;
     align-items: center;
+}
+
+.fale-conosco {
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
 }
