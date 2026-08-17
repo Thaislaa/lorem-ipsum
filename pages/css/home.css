@@ -17,8 +17,9 @@ header {
     align-items: center;
 }
 
-header img {
-    width: 110px;
+header img,
+.img-footer>img {
+    width: 100px;
 }
 
 nav ul {
@@ -61,12 +62,12 @@ p {
     width: 100%;
     max-width: 90%;
     margin: 0 auto;
-    display: flex;
 }
 
 .menu {
     align-items: center;
     justify-content: space-between;
+    display: flex;
 }
 
 .banner h1 {
@@ -120,9 +121,9 @@ button {
     max-height: 45%;
 }
 
-.fale-conosco>img {
-    max-width: 55%;
-    max-height: 55%;
+.fale-cont>img {
+    max-width: 650px;
+    max-height: 650px;
 }
 
 .text-sobre-nos,
@@ -289,10 +290,34 @@ button {
     align-items: center;
 }
 
+.fale-cont {
+    display: flex;
+    justify-content: space-between;
+}
+
 .fale-conosco {
     height: 100vh;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+    background-color: #F6F6F6;
+}
+
+.img-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 40px 25px 25px 0;
+}
+
+.conteudo-footer {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+}
+
+.menu>p {
+    color: #898989;
+    font-size: 14px;
 }
