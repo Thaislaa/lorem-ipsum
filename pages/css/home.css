@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
 header {
     background-color: #fff;
     min-height: 8vh;
@@ -18,7 +22,7 @@ header {
 }
 
 header img,
-.img-footer>img {
+.img-footer img {
     width: 100px;
 }
 
@@ -35,17 +39,6 @@ nav a {
     text-decoration: none;
     color: #898989;
     font-size: 1em;
-}
-
-a,
-h1,
-h2,
-h3,
-button,
-.card-nome,
-.card-data,
-.titulo-func {
-    font-family: "Montserrat", sans-serif;
 }
 
 .banner-infos>p {
@@ -75,16 +68,11 @@ p {
 }
 
 h1,
-h3,
 h2 {
     font-size: 4em;
     color: #FFFFFF;
     font-weight: 700;
     margin: 0;
-}
-
-h2 {
-    color: #FF8E6E;
 }
 
 .banner-infos {
@@ -110,7 +98,7 @@ button {
 }
 
 .sobre {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -147,9 +135,12 @@ button {
     color: #FFFFFF;
 }
 
+.laranja {
+    color: #FF8E6E;
+}
+
 .sobre-infos h2,
 .fale-conosco-info h2 {
-    color: #FF8E6E;
     font-size: 4em;
     margin: 0;
 }
@@ -161,10 +152,12 @@ button {
 }
 
 .servicos {
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(rgba(81, 80, 112, 0.7),
             rgba(81, 80, 112, 0.7)), url(../../img/image-servicos.png);
     background-size: cover;
+    display: flex;
+    align-items: center;
 }
 
 .servicos-infos,
@@ -176,8 +169,10 @@ button {
 }
 
 .depoimentos {
-    height: 100vh;
+    min-height: 100vh;
     background-color: #F6F6F6;
+    display: flex;
+    align-items: center;
 }
 
 .card-img-info>img {
@@ -225,16 +220,7 @@ button {
 }
 
 .funcionalidades {
-    height: 100vh;
     background: linear-gradient(135deg, #515070, #6B69B0);
-}
-
-.funcionalidades-infos {
-    height: 100%;
-}
-
-.funcionalidades-infos {
-    margin-bottom: 0;
 }
 
 .funcionalidades-img {
@@ -243,21 +229,20 @@ button {
 }
 
 .funcionalidades-img>img {
-    height: 650px;
-}
-
-.funcionalidades>h2 {
-    height: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: end;
+    height: 800px;
 }
 
 .funcionalidades-info {
     display: flex;
-    flex-direction: row;
-    height: 85%;
     justify-content: space-between;
+}
+
+.funcionalidades-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: end;
 }
 
 .card-item {
@@ -267,8 +252,8 @@ button {
 }
 
 .item-func>img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     margin-right: 25px;
 }
 
@@ -280,14 +265,16 @@ button {
 }
 
 .funcionalidade-texto {
-    width: 243px;
+    width: 350px;
     color: #fff;
     margin-top: 10px;
+    font-size: 20px;
 }
 
 .item-func {
     display: flex;
     align-items: center;
+    margin-top: 40px;
 }
 
 .fale-cont {
@@ -296,7 +283,7 @@ button {
 }
 
 .fale-conosco {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
