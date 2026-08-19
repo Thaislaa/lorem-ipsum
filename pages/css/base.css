@@ -5,8 +5,46 @@
 body {
     min-height: 100vh;
     margin: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
 img {
     max-width: 100%;
+}
+
+header {
+    background-color: #fff;
+    min-height: 8vh;
+    display: flex;
+}
+
+header img {
+    width: 100px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #898989;
+    font-size: 1em;
+}
+
+.container {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.menu {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
 }

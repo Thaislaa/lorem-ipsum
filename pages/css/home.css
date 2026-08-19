@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-body {
-    font-family: "Montserrat", sans-serif;
-}
-
-header {
-    background-color: #fff;
-    min-height: 8vh;
-    display: flex;
-}
-
 .banner {
     background-image: linear-gradient(rgba(81, 80, 112, 0.7),
             rgba(81, 80, 112, 0.7)), url(../../img/Image.jpg);
@@ -21,24 +11,8 @@ header {
     align-items: center;
 }
 
-header img,
 .img-footer img {
     width: 100px;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: flex-end;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: #898989;
-    font-size: 1em;
 }
 
 .banner-infos>p {
@@ -49,18 +23,6 @@ nav a {
 
 p {
     font-family: "Open Sans", sans-serif;
-}
-
-.container {
-    width: 100%;
-    max-width: 90%;
-    margin: 0 auto;
-}
-
-.menu {
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
 }
 
 .banner h1 {
