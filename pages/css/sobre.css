@@ -12,12 +12,39 @@
 
 h1 {
     font-size: 4em;
-    color: #FFFFFF;
     font-weight: 700;
     margin: 0;
 }
 
+.white {
+    color: #FFFFFF;
+}
+
+.purple {
+    color: #515070;
+}
+
 .text-sub {
     font-size: 1.5em;
-    color: #FFFFFF;
+}
+
+.team {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.margin-top-0 {
+    margin-top: 0;
+}
+
+.team-img {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.team-img>img {
+    max-width: 400px;
 }
