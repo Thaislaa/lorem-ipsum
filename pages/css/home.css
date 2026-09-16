@@ -11,18 +11,10 @@
     align-items: center;
 }
 
-.img-footer img {
-    width: 100px;
-}
-
 .banner-infos>p {
     font-size: 1.3em;
     color: #FFFFFF;
     margin: 0;
-}
-
-p {
-    font-family: "Open Sans", sans-serif;
 }
 
 .banner h1 {
@@ -251,22 +243,4 @@ button {
     align-items: center;
     justify-content: space-between;
     background-color: #F6F6F6;
-}
-
-.img-footer {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 40px 25px 25px 0;
-}
-
-.conteudo-footer {
-    display: flex;
-    flex-direction: column;
-    margin: 25px 0;
-}
-
-.menu>p {
-    color: #898989;
-    font-size: 14px;
 }

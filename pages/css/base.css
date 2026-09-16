@@ -12,6 +12,10 @@ img {
     max-width: 100%;
 }
 
+p {
+    font-family: "Open Sans", sans-serif;
+}
+
 header {
     background-color: #fff;
     min-height: 8vh;
@@ -47,4 +51,27 @@ nav a {
     align-items: center;
     justify-content: space-between;
     display: flex;
+}
+
+.img-footer img {
+    width: 100px;
+}
+
+
+.img-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 40px 25px 25px 0;
+}
+
+.conteudo-footer {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+}
+
+.menu>p {
+    color: #898989;
+    font-size: 14px;
 }
