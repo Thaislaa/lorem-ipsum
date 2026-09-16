@@ -31,7 +31,7 @@ h1 {
 }
 
 .team {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,7 +52,7 @@ h1 {
 }
 
 .mis-vis-val {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
 }
@@ -86,7 +86,7 @@ h1 {
 
 .text-conteudo {
     color: #898989;
-    font-size: 1.5em;
+    font-size: 1.3em;
     word-spacing: 0.5em;
     line-height: 1.8em;
     margin-top: 45px;
