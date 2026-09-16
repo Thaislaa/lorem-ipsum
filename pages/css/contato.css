@@ -1,0 +1,22 @@
+.banner {
+    background-image: linear-gradient(rgba(81, 80, 112, 0.7),
+            rgba(81, 80, 112, 0.7)), url(../../img/image-contact.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 4em;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin: 0;
+}
+
+.div-contato>p {
+    color: white;
+    font-size: 1.5em;
+}
