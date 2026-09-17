@@ -53,3 +53,57 @@ form {
     flex-direction: row;
     align-items: center;
 }
+
+#termos {
+    margin: 0 5px 0 0;
+}
+
+h2 {
+    color: #FF8E6E;
+    font-size: 2.1em;
+}
+
+.label-text {
+    color: #898989;
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+input,
+select,
+textarea {
+    border: none;
+    border-bottom: 1px solid #D7D7D7;
+    margin-bottom: 20px;
+    padding: 15px 0;
+}
+
+.margin-right-form {
+    margin-right: 15px;
+}
+
+.div-radio {
+    display: flex;
+}
+
+button {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1em;
+    width: 150px;
+    height: 60px;
+    cursor: pointer;
+    margin: 20px 0;
+    border-radius: 4px;
+    background-color: #515070;
+    border: 1px solid #515070;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+button>img {
+    width: 8px;
+}

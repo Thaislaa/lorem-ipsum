@@ -51,22 +51,22 @@
 
             <form action="#">
                 <div class="div-formulario">
-                    <div class="conteudo-form">
-                        <label for="nome">Nome</label>
+                    <div class="conteudo-form margin-right-form">
+                        <label for="nome" class="label-text">Nome</label>
                         <input name="nome" id="nome" type="text" placeholder="Ex.: José Maria da Silva" required>
                     </div>
 
                     <div class="conteudo-form">
-                        <label for="email">Email</label>
+                        <label for="email" class="label-text">E-mail</label>
                         <input name="email" id="email" type="email" placeholder="Ex.: seuemail@email.com" required>
                     </div>
                 </div>
 
                 <div class="div-formulario">
-                    <div class="conteudo-form">
-                        <label for="ramo">Ramo em que atua</label>
+                    <div class="conteudo-form margin-right-form">
+                        <label for="ramo" class="label-text">Ramo em que atua</label>
                         <select name="ramo" id="ramo" required>
-                            <option value="">Selecione um ramo</option>
+                            <option value="">Selecione...</option>
                             <option value="tecnologia">Tecnologia</option>
                             <option value="educacao">Educação</option>
                             <option value="saude">Saúde</option>
@@ -89,31 +89,33 @@
                     </div>
 
                     <div class="conteudo-form">
-                        <label for="assunto">Assunto</label required>
+                        <label for="assunto" class="label-text">Assunto</label required>
 
-                        <div>
-                            <input type="radio" name="assunto" id="investimento" value="investimento" required>
-                            <label for="investimento">Investimento</label>
-                        </div>
+                        <div class="div-radio">
+                            <div>
+                                <input type="radio" name="assunto" id="investimento" value="investimento" required>
+                                <label for="investimento">Investimento</label>
+                            </div>
 
-                        <div>
-                            <input type="radio" name="assunto" id="contratacao" value="contratacao">
-                            <label for="contratacao">Contratação</label>
+                            <div>
+                                <input type="radio" name="assunto" id="contratacao" value="contratacao">
+                                <label for="contratacao">Contratação</label>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <label for="mensagem">Mensagem</label>
+                <label for="mensagem" class="label-text">Mensagem</label>
                 <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem aqui" required></textarea>
 
-                <div class="div-formulario">
-                    <div class="conteudo-form check">
+                <div class="div-formulario display-flex">
+                    <div class="conteudo-form check margin-right-form">
                         <input type="checkbox" name="termos" id="termos" value="sim" required>
                         <label for="termos">Li e concordo com a política de privacidade</label>
                     </div>
 
                     <div class="conteudo-form">
-                        <button type="submit">Enviar <img src="../img/mais.svg" alt="Ícone Mais"></button>
+                        <button type="submit">ENVIAR <img src="../img/mais.svg" alt="Ícone Mais"></button>
                     </div>
                 </div>
             </form>
