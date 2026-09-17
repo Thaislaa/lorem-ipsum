@@ -42,6 +42,82 @@
                     Nosso trabalho é desenvolver textos de marcação.</p>
             </div>
         </section>
+
+        <section class="forms container">
+            <div class="title-forms">
+                <h2>Envie-nos uma mensagem</h2>
+                <img src="/img/ENVELOP.svg" alt="Ícone de mensagem">
+            </div>
+
+            <form action="#">
+                <div class="div-formulario">
+                    <div class="conteudo-form">
+                        <label for="nome">Nome</label>
+                        <input name="nome" id="nome" type="text" placeholder="Ex.: José Maria da Silva" required>
+                    </div>
+
+                    <div class="conteudo-form">
+                        <label for="email">Email</label>
+                        <input name="email" id="email" type="email" placeholder="Ex.: seuemail@email.com" required>
+                    </div>
+                </div>
+
+                <div class="div-formulario">
+                    <div class="conteudo-form">
+                        <label for="ramo">Ramo em que atua</label>
+                        <select name="ramo" id="ramo" required>
+                            <option value="">Selecione um ramo</option>
+                            <option value="tecnologia">Tecnologia</option>
+                            <option value="educacao">Educação</option>
+                            <option value="saude">Saúde</option>
+                            <option value="comercio">Comércio</option>
+                            <option value="industria">Indústria</option>
+                            <option value="servicos">Serviços</option>
+                            <option value="administracao">Administração</option>
+                            <option value="financas">Finanças</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="engenharia">Engenharia</option>
+                            <option value="construcao">Construção Civil</option>
+                            <option value="agropecuaria">Agropecuária</option>
+                            <option value="transportes">Transportes e Logística</option>
+                            <option value="alimentacao">Alimentação</option>
+                            <option value="turismo">Turismo e Hotelaria</option>
+                            <option value="comunicacao">Comunicação</option>
+                            <option value="juridico">Jurídico</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="conteudo-form">
+                        <label for="assunto">Assunto</label required>
+
+                        <div>
+                            <input type="radio" name="assunto" id="investimento" value="investimento" required>
+                            <label for="investimento">Investimento</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="assunto" id="contratacao" value="contratacao">
+                            <label for="contratacao">Contratação</label>
+                        </div>
+                    </div>
+                </div>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem aqui" required></textarea>
+
+                <div class="div-formulario">
+                    <div class="conteudo-form check">
+                        <input type="checkbox" name="termos" id="termos" value="sim" required>
+                        <label for="termos">Li e concordo com a política de privacidade</label>
+                    </div>
+
+                    <div class="conteudo-form">
+                        <button type="submit">Enviar <img src="../img/mais.svg" alt="Ícone Mais"></button>
+                    </div>
+                </div>
+            </form>
+        </section>
     </main>
 
 </body>
