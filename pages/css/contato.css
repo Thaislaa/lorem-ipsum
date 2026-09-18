@@ -23,17 +23,17 @@ h1 {
 
 .forms {
     height: 100vh;
+    padding-right: 5%;
 }
 
 .title-forms {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 50vw;
+    margin-bottom: 40px;
 }
 
 form {
-    width: 55vw;
     display: flex;
     flex-direction: column;
     width: 50vw;
@@ -63,10 +63,19 @@ h2 {
     font-size: 2.1em;
 }
 
+h3 {
+    color: #FFFFFF;
+    font-size: 2.1em;
+    margin: 0;
+    height: 15%;
+    display: flex;
+    align-items: end;
+}
+
 .label-text {
     color: #898989;
     font-weight: 700;
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin-bottom: 20px;
 }
 
@@ -75,8 +84,13 @@ select,
 textarea {
     border: none;
     border-bottom: 1px solid #D7D7D7;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     padding: 15px 0;
+    font-size: 1em;
+}
+
+.div-radio label {
+    font-size: 1em;
 }
 
 .margin-right-form {
@@ -85,6 +99,8 @@ textarea {
 
 .div-radio {
     display: flex;
+    margin-top: 20px;
+    padding-top: 15px;
 }
 
 button {
@@ -106,4 +122,82 @@ button {
 
 button>img {
     width: 8px;
+}
+
+#ramo,
+::placeholder {
+    color: #A9A9A9
+}
+
+.label-texto-claro {
+    color: #A9A9A9;
+}
+
+.texto-politica {
+    color: #898989;
+}
+
+input[type="radio"] {
+    accent-color: #515070;
+    transform: scale(1.2);
+}
+
+input[type="checkbox"] {
+    accent-color: white;
+    transform: scale(1.2);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+.section-formulario {
+    display: flex;
+    flex-direction: row;
+}
+
+.infos-contato {
+    background: linear-gradient(125deg, #515070, #6B69B0);
+    width: 30%;
+    padding-left: 5%;
+}
+
+.infos-contato {
+    color: #FFFFFF;
+    word-spacing: 3px;
+}
+
+.informacoes {
+    display: flex;
+    align-items: center;
+}
+
+.informacoes>p {
+    margin-left: 25px;
+    font-size: 1.2em;
+}
+
+.div-icones-contato {
+    width: 50px;
+    height: 50px;
+}
+
+.icone-contato {
+    width: 100%;
+    height: 100%;
+}
+
+.endereco {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 75%;
+}
+
+.conteudo-contato {
+    height: 80%;
+    display: flex;
+    align-items: center;
 }

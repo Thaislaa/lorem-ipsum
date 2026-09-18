@@ -43,82 +43,116 @@
             </div>
         </section>
 
-        <section class="forms container">
-            <div class="title-forms">
-                <h2>Envie-nos uma mensagem</h2>
-                <img src="/img/ENVELOP.svg" alt="Ícone de mensagem">
-            </div>
-
-            <form action="#">
-                <div class="div-formulario">
-                    <div class="conteudo-form margin-right-form">
-                        <label for="nome" class="label-text">Nome</label>
-                        <input name="nome" id="nome" type="text" placeholder="Ex.: José Maria da Silva" required>
-                    </div>
-
-                    <div class="conteudo-form">
-                        <label for="email" class="label-text">E-mail</label>
-                        <input name="email" id="email" type="email" placeholder="Ex.: seuemail@email.com" required>
-                    </div>
+        <section class="container section-formulario">
+            <div class="forms">
+                <div class="title-forms">
+                    <h2>Envie-nos uma mensagem</h2>
+                    <img src="/img/ENVELOP.svg" alt="Ícone de mensagem">
                 </div>
 
-                <div class="div-formulario">
-                    <div class="conteudo-form margin-right-form">
-                        <label for="ramo" class="label-text">Ramo em que atua</label>
-                        <select name="ramo" id="ramo" required>
-                            <option value="">Selecione...</option>
-                            <option value="tecnologia">Tecnologia</option>
-                            <option value="educacao">Educação</option>
-                            <option value="saude">Saúde</option>
-                            <option value="comercio">Comércio</option>
-                            <option value="industria">Indústria</option>
-                            <option value="servicos">Serviços</option>
-                            <option value="administracao">Administração</option>
-                            <option value="financas">Finanças</option>
-                            <option value="marketing">Marketing</option>
-                            <option value="engenharia">Engenharia</option>
-                            <option value="construcao">Construção Civil</option>
-                            <option value="agropecuaria">Agropecuária</option>
-                            <option value="transportes">Transportes e Logística</option>
-                            <option value="alimentacao">Alimentação</option>
-                            <option value="turismo">Turismo e Hotelaria</option>
-                            <option value="comunicacao">Comunicação</option>
-                            <option value="juridico">Jurídico</option>
-                            <option value="outro">Outro</option>
-                        </select>
+                <form action="#">
+                    <div class="div-formulario">
+                        <div class="conteudo-form margin-right-form">
+                            <label for="nome" class="label-text">Nome</label>
+                            <input name="nome" id="nome" type="text" placeholder="Ex.: José Maria da Silva" required>
+                        </div>
+
+                        <div class="conteudo-form">
+                            <label for="email" class="label-text">E-mail</label>
+                            <input name="email" id="email" type="email" placeholder="Ex.: seuemail@email.com" required>
+                        </div>
                     </div>
 
-                    <div class="conteudo-form">
-                        <label for="assunto" class="label-text">Assunto</label required>
+                    <div class="div-formulario">
+                        <div class="conteudo-form margin-right-form">
+                            <label for="ramo" class="label-text">Ramo em que atua</label>
+                            <select name="ramo" id="ramo" required>
+                                <option value="">Selecione...</option>
+                                <option value="tecnologia">Tecnologia</option>
+                                <option value="educacao">Educação</option>
+                                <option value="saude">Saúde</option>
+                                <option value="comercio">Comércio</option>
+                                <option value="industria">Indústria</option>
+                                <option value="servicos">Serviços</option>
+                                <option value="administracao">Administração</option>
+                                <option value="financas">Finanças</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="engenharia">Engenharia</option>
+                                <option value="construcao">Construção Civil</option>
+                                <option value="agropecuaria">Agropecuária</option>
+                                <option value="transportes">Transportes e Logística</option>
+                                <option value="alimentacao">Alimentação</option>
+                                <option value="turismo">Turismo e Hotelaria</option>
+                                <option value="comunicacao">Comunicação</option>
+                                <option value="juridico">Jurídico</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
 
-                        <div class="div-radio">
-                            <div>
-                                <input type="radio" name="assunto" id="investimento" value="investimento" required>
-                                <label for="investimento">Investimento</label>
-                            </div>
+                        <div>
+                            <label for="assunto" class="label-text" required>Assunto</label>
+                            <div class="div-radio">
+                                <div>
+                                    <input type="radio" name="assunto" id="investimento" value="investimento" required>
+                                    <label for="investimento"
+                                        class="label-texto-claro margin-right-form">Investimento</label>
+                                </div>
 
-                            <div>
-                                <input type="radio" name="assunto" id="contratacao" value="contratacao">
-                                <label for="contratacao">Contratação</label>
+                                <div>
+                                    <input type="radio" name="assunto" id="contratacao" value="contratacao">
+                                    <label for="contratacao" class="label-texto-claro">Contratação</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <label for="mensagem" class="label-text">Mensagem</label>
-                <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem aqui" required></textarea>
+                    <label for="mensagem" class="label-text">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem aqui" required></textarea>
 
-                <div class="div-formulario display-flex">
-                    <div class="conteudo-form check margin-right-form">
-                        <input type="checkbox" name="termos" id="termos" value="sim" required>
-                        <label for="termos">Li e concordo com a política de privacidade</label>
+                    <div class="div-formulario display-flex">
+                        <div class="conteudo-form check margin-right-form">
+                            <input type="checkbox" name="termos" id="termos" value="sim" required>
+                            <label for="termos" class="texto-politica">Li e concordo com a <u>política de
+                                    privacidade</u></label>
+                        </div>
+
+                        <div class="conteudo-form">
+                            <button type="submit">ENVIAR <img src="../img/mais.svg" alt="Ícone Mais"></button>
+                        </div>
                     </div>
+                </form>
+            </div>
 
-                    <div class="conteudo-form">
-                        <button type="submit">ENVIAR <img src="../img/mais.svg" alt="Ícone Mais"></button>
+            <div class="infos-contato container">
+                <h3>Informações de contato</h3>
+
+                <div class="conteudo-contato">
+                    <div class="endereco">
+                        <div class="informacoes">
+                            <div class="div-icones-contato">
+                                <img src="/img/localizacao.svg" alt="ícone de localização" class="icone-contato">
+                            </div>
+                            <p>Av. Theodomiro Porto da <br> Fonseca, 3101 - Cristo Rei, São <br> Leopoldo - RS,
+                                93022-715
+                            </p>
+                        </div>
+
+                        <div class="informacoes">
+                            <div class="div-icones-contato">
+                                <img src="/img/celular.svg" alt="ícone de contato" class="icone-contato">
+                            </div>
+                            <p>(51) 3081-3600</p>
+                        </div>
+
+                        <div class="informacoes">
+                            <div class="div-icones-contato">
+                                <img src="/img/mensagem.svg" alt="Ícone de e-mail" class="icone-contato">
+                            </div>
+                            <p>contato@loremipsungram.com</p>
+                        </div>
                     </div>
                 </div>
-            </form>
+            </div>
         </section>
     </main>
 

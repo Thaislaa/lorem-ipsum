@@ -18,6 +18,15 @@ p {
     font-family: "Open Sans", sans-serif;
 }
 
+::placeholder,
+label,
+option,
+#ramo,
+textarea,
+input {
+    font-family: "Montserrat", sans-serif;
+}
+
 header {
     background-color: #fff;
     min-height: 8vh;
@@ -58,7 +67,6 @@ nav a {
 .img-footer img {
     width: 100px;
 }
-
 
 .img-footer {
     display: flex;
