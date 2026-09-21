@@ -85,3 +85,65 @@ nav a {
     color: #898989;
     font-size: 14px;
 }
+
+.botao-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+    z-index: 2;
+}
+
+@keyframes aparecer {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 770px) {
+    .menuNav {
+        display: none;
+    }
+
+    .botao-menu {
+        display: flex;
+        border: none;
+    }
+
+    .botao-menu>img {
+        width: 30px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        justify-content: start;
+        padding-top: 10vh;
+        padding-left: 30px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    ul {
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        width: 40%;
+        background-color: #fff;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu-nav.aberto {
+        display: block;
+        animation: aparecer 0.3s linear;
+    }
+}
