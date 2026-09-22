@@ -96,6 +96,7 @@ nav a {
     display: none;
     margin-right: 5%;
     z-index: 2;
+    cursor: pointer;
 }
 
 @keyframes aparecer {
