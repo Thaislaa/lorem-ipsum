@@ -64,6 +64,12 @@ nav a {
     display: flex;
 }
 
+.div-imgs-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .img-footer img {
     width: 100px;
 }
@@ -88,15 +94,13 @@ nav a {
 
 .botao-menu {
     display: none;
-    position: absolute;
-    right: 0;
     margin-right: 5%;
     z-index: 2;
 }
 
 @keyframes aparecer {
     from {
-        transform: translateX(20px);
+        transform: translateX(-100%);
         opacity: 0;
     }
 
@@ -134,16 +138,24 @@ nav a {
     ul {
         height: 100vh;
         position: absolute;
-        right: 0;
+        left: 0;
         width: 40%;
-        background-color: #fff;
         top: 0;
         display: flex;
-        flex-direction: row;
+        background-color: #fff;
     }
 
     .menu-nav.aberto {
         display: block;
-        animation: aparecer 0.3s linear;
+    }
+
+    .menu-nav.aberto ul {
+        animation: aparecer 0.3s ease;
+    }
+
+    .div-imgs-header {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
     }
 }
