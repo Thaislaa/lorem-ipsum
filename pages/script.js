@@ -14,13 +14,18 @@ botaoMenu.addEventListener("click", function () {
 });
 
 document.addEventListener("click", function (event) {
-    if (!menuNav.contains(event.target) && !botaoMenu.contains(event.target)) {
+    if (menuNav.classList.contains("aberto") &&
+        !menuNav.contains(event.target) &&
+        !botaoMenu.contains(event.target)) {
+
         menuNav.style.display = "none";
         menuNav.classList.remove("aberto");
     }
 });
 
 window.addEventListener("scroll", function () {
-    menuNav.style.display = "none";
-    menuNav.classList.remove("aberto");
+    if (menuNav.classList.contains("aberto")) {
+        menuNav.style.display = "none";
+        menuNav.classList.remove("aberto");
+    }
 });
