@@ -200,4 +200,8 @@ nav a {
     .botao-menu>img {
         height: 25px;
     }
+
+    .botao-menu {
+        background-color: #fff;
+    }
 }
