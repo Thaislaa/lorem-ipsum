@@ -244,6 +244,12 @@ select:focus {
 }
 
 @media (max-width: 795px) {
+
+    h2,
+    h3 {
+        font-size: 1.5em;
+    }
+
     .section-formulario {
         flex-direction: column;
     }
@@ -253,13 +259,33 @@ select:focus {
     }
 
     .forms {
-        height: 100vh;
-        padding-right: 0;
+        min-height: 100vh;
+        width: 100%;
+        margin: 30px 0;
+    }
+
+    .title-forms,
+    h3 {
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+
+    .informacoes {
+        margin-bottom: 0;
+        height: 130px;
+    }
+
+    .informacoes>p {
+        font-size: 0.9em;
     }
 
     .infos-contato {
-        height: 100vh;
         width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .div-formulario {
@@ -269,6 +295,7 @@ select:focus {
 
     .conteudo-form {
         width: 100%;
+        margin-right: 0;
     }
 
     form {
@@ -278,4 +305,27 @@ select:focus {
     .main-formulario {
         justify-content: start;
     }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .div-contato>p {
+        font-size: 1.2em;
+    }
+
+    header img {
+        width: 20px;
+        height: 27px;
+    }
+
+    .div-termo-btn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .texto-politica {
+        font-size: 0.9em;
+    }
+
 }
