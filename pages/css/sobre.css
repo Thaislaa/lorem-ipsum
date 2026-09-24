@@ -11,11 +11,15 @@
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 700;
     margin: 0;
     display: flex;
     align-items: center;
+}
+
+h2 {
+    font-size: 3em;
 }
 
 .white {
@@ -27,11 +31,11 @@ h1 {
 }
 
 .text-sub {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .team {
-    height: 80vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +52,7 @@ h1 {
 }
 
 .team-img>img {
-    max-width: 400px;
+    max-width: 280px;
 }
 
 .mis-vis-val {
@@ -64,18 +68,23 @@ h1 {
 
 .conteudo {
     display: flex;
+    align-items: center;
 }
 
 .card {
-    width: 500px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .icon {
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
+    margin-right: 25px;
+}
+
+.margin-right {
     margin-right: 25px;
 }
 
@@ -86,7 +95,7 @@ h1 {
 
 .text-conteudo {
     color: #898989;
-    font-size: 1.3em;
+    font-size: 1.2em;
     word-spacing: 0.5em;
     line-height: 1.8em;
     margin-top: 45px;
