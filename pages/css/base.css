@@ -89,7 +89,6 @@ nav a {
 
 .menu>p {
     color: #898989;
-    font-size: 14px;
 }
 
 .botao-menu {
@@ -97,6 +96,10 @@ nav a {
     margin-right: 5%;
     z-index: 2;
     cursor: pointer;
+}
+
+.texto2-footer {
+    display: none;
 }
 
 @keyframes aparecer {
@@ -158,5 +161,35 @@ nav a {
         flex-direction: row-reverse;
         justify-content: space-between;
         width: 100%;
+    }
+
+    .logo-cwi {
+        display: none;
+    }
+
+    .logo-lorem {
+        margin-bottom: 8px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 55px;
+    }
+
+    .img-footer {
+        width: 80px;
+        display: flex;
+        align-items: center;
+    }
+
+    .texto1-footer {
+        display: none;
+    }
+
+    .texto2-footer {
+        display: block;
+        font-size: 12px;
     }
 }
