@@ -100,3 +100,13 @@ h2 {
     line-height: 1.8em;
     margin-top: 45px;
 }
+
+@media (max-width: 1240px) and (min-width: 980px) {
+    .team-img>img {
+        width: 220px;
+    }
+
+    .text-conteudo {
+        font-size: 1.1em;
+    }
+}
