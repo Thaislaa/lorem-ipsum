@@ -114,7 +114,7 @@ nav a {
     }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 795px) {
     .menuNav {
         display: none;
     }
@@ -191,5 +191,13 @@ nav a {
     .texto2-footer {
         display: block;
         font-size: 12px;
+    }
+
+    header img {
+        height: 33px;
+    }
+
+    .botao-menu>img {
+        height: 25px;
     }
 }
