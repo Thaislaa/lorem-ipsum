@@ -1,6 +1,6 @@
 .banner {
     background-image: linear-gradient(rgba(81, 80, 112, 0.7),
-            rgba(81, 80, 112, 0.7)), url(../../img/BANNER\ IMAGE\ -\ sobre.png);
+            rgba(81, 80, 112, 0.7)), url(../../img/image-contact.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -56,7 +56,7 @@ h2 {
 }
 
 .mis-vis-val {
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
 }
@@ -72,7 +72,7 @@ h2 {
 }
 
 .card {
-    max-width: 500px;
+    max-width: 550px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -108,5 +108,62 @@ h2 {
 
     .text-conteudo {
         font-size: 1.1em;
+    }
+}
+
+@media (max-width: 981px) {
+    .team-img {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .team-img>img {
+        margin-bottom: 20px;
+    }
+
+    .div-mais {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .card {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .text-conteudo {
+        margin-top: 0;
+    }
+
+    .team {
+        padding-top: 50px;
+    }
+
+    .team-img>img {
+        width: 100%;
+    }
+
+    .text-conteudo {
+        font-size: 1em;
+    }
+
+    .text-sub {
+        font-size: 1.1em;
+    }
+
+    h1,
+    h2 {
+        font-size: 2.5em;
+    }
+
+    .icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .team>.text-sub {
+        margin-top: 20px;
     }
 }
