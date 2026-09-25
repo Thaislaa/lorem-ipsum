@@ -62,11 +62,6 @@ button {
     max-height: 45%;
 }
 
-.fale-cont>img {
-    max-width: 650px;
-    max-height: 650px;
-}
-
 .text-sobre-nos,
 .subtitulo-servicos {
     color: #515070;
@@ -90,12 +85,6 @@ button {
 
 .laranja {
     color: #FF8E6E;
-}
-
-.sobre-infos h2,
-.fale-conosco-info h2 {
-    font-size: 4em;
-    margin: 0;
 }
 
 .sobre-infos button,
@@ -162,7 +151,6 @@ button {
 
 .card-data {
     color: #FF8E6E;
-    margin: 0;
     margin: 5px 0 0 25px;
 }
 
@@ -179,6 +167,8 @@ button {
 .funcionalidades-img {
     display: flex;
     align-items: end;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .funcionalidades-img>img {
@@ -201,11 +191,6 @@ button {
 
 .funcionalidades-card .card-item:last-child {
     grid-column: 3;
-}
-
-.funcionalidades-img {
-    grid-column: 2;
-    grid-row: 1;
 }
 
 .funcionalidades-conteudo {
@@ -274,11 +259,6 @@ button {
     .funcionalidades-img>img {
         height: 600px;
     }
-
-    .fale-cont>img {
-        height: 400px;
-        width: 500px;
-    }
 }
 
 @media (max-width: 1120px) and (min-width: 920px) {
@@ -299,12 +279,6 @@ button {
     .text-lorem,
     .card-mensagem {
         font-size: 1.1em;
-    }
-
-    .fale-cont>img {
-        max-width: 500px;
-        max-height: 400px;
-        margin-left: 20px;
     }
 
     .sobre-infos h2,
@@ -342,9 +316,7 @@ button {
         margin: 60px 0;
     }
 
-    .sobre-infos h2,
-    h2,
-    .fale-conosco-info>h2 {
+    h2 {
         font-size: 2em;
     }
 
@@ -441,6 +413,5 @@ button {
 
     .fale-conosco-img {
         text-align: center;
-        margin: 60px 0;
     }
 }
