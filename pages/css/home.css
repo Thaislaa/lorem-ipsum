@@ -312,7 +312,7 @@ button {
 
     .sobre>img,
     .fale-conosco-img {
-        max-width: 100%;
+        min-width: 100%;
         margin: 60px 0;
     }
 
@@ -413,5 +413,10 @@ button {
 
     .fale-conosco-img {
         text-align: center;
+    }
+
+    .sobre,
+    .fale-cont {
+        justify-content: space-around;
     }
 }
