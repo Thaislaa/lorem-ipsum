@@ -29,3 +29,10 @@ window.addEventListener("scroll", function () {
         menuNav.classList.remove("aberto");
     }
 });
+
+window.addEventListener("resize", function () {
+    if (window.innerWidth > 795) {
+        menuNav.style.display = "";
+        menuNav.classList.remove("aberto");
+    }
+});
