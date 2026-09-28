@@ -32,6 +32,7 @@ h2 {
 
 .text-sub {
     font-size: 1.3em;
+    margin-top: 0;
 }
 
 .team {
@@ -39,10 +40,6 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.margin-top-0 {
-    margin-top: 0;
 }
 
 .team-img {
@@ -75,16 +72,16 @@ h2 {
     max-width: 550px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin-right: 25px;
+}
+
+.card:last-child {
+    margin-right: 0;
 }
 
 .icon {
     width: 85px;
     height: 85px;
-    margin-right: 25px;
-}
-
-.margin-right {
     margin-right: 25px;
 }
 
@@ -101,7 +98,7 @@ h2 {
     margin-top: 45px;
 }
 
-@media (max-width: 1240px) and (min-width: 980px) {
+@media (max-width: 1240px) and (min-width: 982px) {
     .team-img>img {
         width: 220px;
     }
@@ -118,10 +115,6 @@ h2 {
         margin-top: 0;
     }
 
-    .team-img>img {
-        margin-bottom: 20px;
-    }
-
     .div-mais {
         flex-direction: column;
         align-items: center;
@@ -133,11 +126,8 @@ h2 {
         margin-top: 20px;
     }
 
-    .text-conteudo {
-        margin-top: 0;
-    }
-
     .team {
+        margin-bottom: 20px;
         padding-top: 50px;
     }
 
@@ -147,6 +137,7 @@ h2 {
 
     .text-conteudo {
         font-size: 1em;
+        margin-top: 0;
     }
 
     .text-sub {
