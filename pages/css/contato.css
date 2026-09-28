@@ -42,11 +42,6 @@ h1 {
     margin-bottom: 100px;
 }
 
-.title-forms>img {
-    display: flex;
-    align-items: end;
-}
-
 form {
     display: flex;
     flex-direction: column;
@@ -184,9 +179,6 @@ select:focus {
     background: linear-gradient(125deg, #515070, #6B69B0);
     padding-left: 5%;
     padding-right: 5%;
-}
-
-.infos-contato {
     color: #FFFFFF;
     word-spacing: 3px;
 }
@@ -268,13 +260,13 @@ select:focus {
         background-color: #fff;
     }
 
-    .title-forms,
-    h3 {
+    .title-forms {
         margin-bottom: 20px;
     }
 
     h3 {
         margin-top: 0;
+        margin-bottom: 20px;
     }
 
     .informacoes {
@@ -294,7 +286,6 @@ select:focus {
 
     .div-formulario {
         flex-direction: column;
-        justify-content: center;
     }
 
     .conteudo-form {
@@ -326,5 +317,4 @@ select:focus {
     .texto-politica {
         font-size: 0.9em;
     }
-
 }
