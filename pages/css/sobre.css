@@ -1,6 +1,6 @@
 .banner {
     background-image: linear-gradient(rgba(81, 80, 112, 0.7),
-            rgba(81, 80, 112, 0.7)), url(../../img/image-contact.png);
+            rgba(81, 80, 112, 0.7)), url(../img/image-contact.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

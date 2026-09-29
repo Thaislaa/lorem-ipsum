@@ -1,6 +1,6 @@
 .banner {
     background-image: linear-gradient(rgba(81, 80, 112, 0.7),
-            rgba(81, 80, 112, 0.7)), url(../../img/Image.jpg);
+            rgba(81, 80, 112, 0.7)), url(../img/Image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -96,7 +96,7 @@ button {
 .servicos {
     min-height: 100vh;
     background-image: linear-gradient(rgba(81, 80, 112, 0.7),
-            rgba(81, 80, 112, 0.7)), url(../../img/image-servicos.png);
+            rgba(81, 80, 112, 0.7)), url(../img/image-servicos.png);
     background-size: cover;
     display: flex;
     align-items: center;
